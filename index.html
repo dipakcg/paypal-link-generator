@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> Paypal Link Generator by Dipak C. Gajjar </title>
+<link rel="stylesheet" href="style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<h1> Paypal Link Generator </h1>
+<table>
+<form id="form">
+	<tr><td>Paypal Email: </td><td><input type="text" name="paypal_email" size="25"></td></tr>
+	<tr><td>Currency: </td><td><select name="currency" class="currency">
+		  <option value="">Select Currency</option>
+		  <option value="AUD">Australian Dollar (AUD)</option>
+		  <option value="BRL">Brazilian Real (BRL)</option>
+		  <option value="CAD">Canadian Dollar (CAD)</option>
+		  <option value="CZK">Czech Koruna (CZK)</option>
+		  <option value="DKK">Danish Krone (DKK)</option>
+		  <option value="EUR">Euro (EUR)</option>
+		  <option value="HKD">Hong Kong Dollar (HKD)</option>
+		  <option value="HUF">Hungarian Forint (HUF)</option>
+		  <option value="ILS">Israeli New Sheqel (ILS)</option>
+		  <option value="JPY">Japanese Yen (JPY)</option>
+		  <option value="MYR">Malaysian Ringgit (MYR)</option>
+		  <option value="MXN">Mexican Peso (MXN)</option>
+		  <option value="NOK">Norwegian Krone (NOK)</option>
+		  <option value="NZD">New Zealand Dollar (NZD)</option>
+		  <option value="PHP">Philippine Peso (PHP)</option>
+		  <option value="PLN">Polish Zloty (PLN)</option>
+		  <option value="GBP" SELECTED="YES">Pound Sterling (GBP)</option>
+		  <option value="SGD">Singapore Dollar (SGD)</option>
+		  <option value="SEK">Swedish Krona (SEK)</option>
+		  <option value="CHF">Swiss Franc (CHF)</option>
+		  <option value="TWD">Taiwan New Dollar (TWD)</option>
+		  <option value="THB">Thai Baht (THB)</option>
+		  <option value="TRY">Turkish Lira (TRY)</option>
+		  <option value="USD">U.S. Dollar (USD)</option>
+		</select></td></tr>
+	<tr><td>Amount: </td><td><input type="text" name="amount" size="25"></td></tr>
+	<tr><td>Description (Note): </td><td><input type="text" name="description" size="25"></td></tr>
+	<textarea style="display:none;" name="code">{{paypal_code}}</textarea>
+	<tr><td colspan="2" align="center" style="padding-top: 10px;"><a name="submitButton"><input type="button" value="Generate Paypal Link" onclick="process()"></a></td></tr>
+</form>
+</table>
+
+<h2>Paypal Link:</h2><textarea id="result" cols="100" rows="10" onclick="this.select();">Paypal link will be display here.</textarea>
+</body>
+</html>
